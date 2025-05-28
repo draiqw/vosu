@@ -1,0 +1,109 @@
+body {
+  background: #f9fafb;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #171717;
+  margin: 0;
+}
+
+.main-container {
+  max-width: 680px;
+  margin: 56px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 4px 32px rgba(60,60,100,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 0.2em;
+  letter-spacing: -1px;
+}
+
+.section {
+  background: #f3f4f6;
+  border-radius: 18px;
+  padding: 28px 22px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 8px rgba(100,100,120,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input[type="file"] {
+  padding: 14px 0;
+  cursor: pointer;
+}
+
+button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-left: 0;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: 12px;
+}
+
+button:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.status-message {
+  margin-top: 14px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.result-title {
+  font-size: 1.25rem;
+  margin: 16px 0 6px 0;
+  font-weight: 700;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  color: #2563eb;
+  text-decoration: none;
+  margin-top: 4px;
+  transition: background 0.15s;
+}
+
+.download-link:hover {
+  background: #e0e7ff;
+  color: #1d4ed8;
+}

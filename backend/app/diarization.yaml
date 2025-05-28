@@ -1,0 +1,24 @@
+diarizer:
+  manifest_filepath: null           # будет подставлен в коде
+  out_dir: null                    # будет подставлен в коде
+  oracle_vad: false                # использовать ли "идеальный" VAD (false — модельный)
+  clustering:
+    parameters:
+      oracle_num_speakers: false   # определять число спикеров автоматически
+      min_num_speakers: 1
+      max_num_speakers: 10
+  vad:
+    model:
+      class_path: "nemo.collections.asr.models.EncDecClassificationModel"
+      init_args:
+        pretrained_model_name: "vad_marblenet"
+  embedding:
+    model:
+      class_path: "nemo.collections.asr.models.EncDecSpeakerLabelModel"
+      init_args:
+        pretrained_model_name: "speakerverification_speakernet"
+  segmentation:
+    model:
+      class_path: "nemo.collections.asr.models.EncDecClassificationModel"
+      init_args:
+        pretrained_model_name: "segmentation_diarizer"
